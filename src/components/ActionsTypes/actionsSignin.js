@@ -1,4 +1,4 @@
-import * as actionTypes from '../ActionsTypes/actionTypes';
+import * as actionTypes from './actionTypes';
 
 const submitFormRequest = () => ({
     type: actionTypes.submitFormRequest,
