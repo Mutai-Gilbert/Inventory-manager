@@ -1,16 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
+import { handleSubmit } from '../ActionsTypes/actionsSignin';
 
 const Signin = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    const handleSubmit = () => {
-        
-    }
-
-
 
   return (
     <div className="App">
