@@ -15,8 +15,13 @@ const StoreLoggedInUser = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                setLoggedUsername(data.user.username);
-                setLoggedEmail(data.user.email);
+                if (data.user && data.user.username && data.user.email) {
+                    setLoggedUsername(data.user.username);
+                    setLoggedEmail(data.user.email);
+                } else {
+                    // Handle the case where data.user or its properties are undefined.
+                    console.error("User data is missing.");
+                }
             })
     }
 
